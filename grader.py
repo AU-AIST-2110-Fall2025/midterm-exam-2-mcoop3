@@ -14,7 +14,13 @@ def extract_data(raw_data):
     s_names = []
     s_grades = []
 
-    # ADD YOUR CODE HERE
+    for s_name in s_names:
+        s_name = s_names[10:-3]
+        s_name.title()
+
+    for s_grade in s_grades:
+        s_grade = s_grades[-1:-4]
+        int(s_grade)
 
     return s_names, s_grades
 
@@ -25,7 +31,17 @@ def curve_grades(grades, by_amount):
     Use a ``while`` loop for iteration to earn full credit (a ``for`` loop works but loses style credit).
     Return the list containing the curved grades (same list if modified, otherwise new).
     """
-    # ADD YOUR CODE HERE
+    i = 0
+    while i < range(len(grades)):
+        by_amount = grades[i] + 5
+        if grades >= 100:
+            curve_grades = 100
+            i += 0
+    return curve_grades
+
+
+    
+
 
 
 def print_top_performers(names, grades):
@@ -38,7 +54,12 @@ def print_top_performers(names, grades):
     Output one line per qualifying record, no extra spaces or blank lines.
     Returns: None
     """
-    # ADD YOUR CODE HERE
+    high_scores = []
+    for i, high_scores in  enumerate(names, grades):
+        if curve_grades >= 95:
+            high_scores.append[i]
+            print(f"{names}: {grades}")
+    return None
 
 
 def main():
